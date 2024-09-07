@@ -43,7 +43,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="sin.jsp">Html</a></li>
-            <li><a class="dropdown-item" href="clientes.jsp">Clientes</a></li>
+            <li><a class="dropdown-item" href="empleados.jsp">Empleados</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Algo Nuevo</a></li>
           </ul>

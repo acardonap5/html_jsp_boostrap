@@ -34,7 +34,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="sin.jsp">Html</a></li>
-            <li><a class="dropdown-item" href="clientes.jsp">Clientes</a></li>
+            <li><a class="dropdown-item" href="empleados.jsp">Empleados</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Algo Nuevo</a></li>
           </ul>
@@ -49,7 +49,7 @@
   </div>
 </nav>
         </header>
-        <h1>Formulario Cliente</h1>
+        <h1>Formulario Empleados</h1>
         <div class="container" >
         <form action="#" method="get" class="form-group needs-validation" novalidate > <!-- post -->
                <label for="lbl_id"  class="form-label" ><b>ID</b></label>
@@ -80,6 +80,44 @@
                 <button name="btn_modificar" id="btn_modificar" class="btn btn-warning"  value="modificar" ><i class="bi bi-pen"></i> Modificar</button>
                 <button name="btn_eliminar" id="btn_eliminar" class="btn btn-danger" value="eliminar"  ><i class="bi bi-trash"></i> Eliminar</button>
         </form>
+            
+  <table class="table table-hover table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Nacimiento</th>
+      <th scope="col">Puesto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>E001</td>
+      <td>Nombre Nombre</td>
+      <td>Apellido Apellido</td>
+      <td>Direccion Guatemala</td>
+      <td>5555555</td>
+      <td>1990-01-01</td>
+      <td>Programador</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>E002</td>
+      <td>Nombre Nombre2</td>
+      <td>Apellido Apellido2</td>
+      <td>Direccion2 Guatemala</td>
+      <td>222222</td>
+      <td>1998-08-08</td>
+      <td>Programador</td>
+    </tr>
+  </tbody>
+</table>
+            
         </div>
         <script>
             (() => {
