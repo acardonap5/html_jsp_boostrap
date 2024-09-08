@@ -3,14 +3,15 @@
     Created on : 6/09/2024, 5:53:32 p. m.
     Author     : Programador
 --%>
-
+<%@page import="java.util.HashMap"%>
+<%@page import="modelo.Puesto" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>JSP Page</title>
+        <title>Empleados</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
@@ -56,12 +57,9 @@
                 <input type="text" name="txt_id" id="txt_id" class="form-control"    value="0"  readonly> 
                 <label for="lbl_codigo"  class="form-label"><b>Codigo</b></label>
                 <input type="text" name="txt_codigo" id="txt_codigo" class="form-control"  placeholder="Ejemplo: E001" pattern="[E]{1}[0-9]{3}" required>
-                <div class="valid-feedback">
-      Completado...
-    </div>
-                <label for="lbl_nombres" class="form-label" class="form-control" ><b>Nombres</b></label>
+                <label for="lbl_nombres" class="form-label" ><b>Nombres</b></label>
                 <input type="text" name="txt_nombres" id="txt_nombres" class="form-control" placeholder="Ejemplo: Nombre1 Nombre2" required>
-                <label for="lbl_apellidos"  class="form-label" class="form-control"><b>Apellidos</b></label>
+                <label for="lbl_apellidos"  class="form-label" ><b>Apellidos</b></label>
                 <input type="text" name="txt_apellidos" id="txt_apellidos" class="form-control" placeholder="Ejemplo: Apellido1 Apellido2" required>
                 <label for="lbl_direccion"  class="form-label"><b>Direccion</b></label>
                 <input type="text"  name="txt_direccion" id="txt_direccion" class="form-control" placeholder="Ejemplo: #Casa calle zona ciudad" required>
@@ -72,8 +70,15 @@
                 <label for="lbl_puesto"  class="form-label"><b>Puesto</b></label>
                 <select name="drop_puesto" id="drop_puesto" class="form-select" required  >
                     <option selected disabled value="">Seleccione...</option>
-                    <option value="1">Programador</option>
-                    <option value="2">Analista</option>
+                    <% 
+                        Puesto puesto = new Puesto();
+                        HashMap<String,String> drop = puesto.drop_sangre();
+                         for (String i:drop.keySet()){
+                             out.println("<option value='" + i + "'>" + drop.get(i) + "</option>");
+                         }
+                         
+                    
+                    %>
                 </select>
                 <br>
                  <button name="btn_agregar" id="btn_agregar" class="btn btn-primary"  value="agregar" ><i class="bi bi-floppy"></i> Agregar</button>

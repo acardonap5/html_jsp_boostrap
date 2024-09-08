@@ -9,11 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Html</title>
     </head>
     <body>
         <a href="index.jsp">Inicio</a>
-        <h1>Formulario Cliente</h1>
+        <h1>Formulario Empleados</h1>
         
         <form action="#" method="get" > <!-- post -->
                <label for="lbl_id" ><b>ID</b></label>
